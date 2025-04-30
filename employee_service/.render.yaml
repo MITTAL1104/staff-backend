@@ -2,11 +2,11 @@ services:
   - type: web
     name: employee-service
     env: java
-    repo: https://github.com/MITTAL1104/staff-backend
     branch: main
+    repo: https://github.com/MITTAL1104/staff-backend
     rootDir: employee_service
-    buildCommand: mvn clean install
+    buildCommand: ./mvnw clean install
     startCommand: java -jar target/*.jar
-    buildFilter:
-      paths:
-        - employee_service/**
+    envVars:
+      - key: JAVA_HOME
+        value: /opt/render/project/.render-java/jdk
