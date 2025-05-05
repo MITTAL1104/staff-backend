@@ -1,10 +1,10 @@
 services:
   - type: web
     name: employee-service
-    env: java
     branch: main
     repo: https://github.com/MITTAL1104/staff-backend
     rootDir: employee_service
+    env:  build
     buildCommand: ./mvnw clean install
     startCommand: java -jar target/employee-0.0.1-SNAPSHOT.jar
 
